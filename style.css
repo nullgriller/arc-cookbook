@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background: #ff7f50;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+.search-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#searchBar {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.recipe-card h2 {
+    color: #ff7f50;
+    margin-bottom: 10px;
+}
+
+.recipe-section-title {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.recipe-detail-card {
+    background: white;
+    margin: 20px auto;
+    padding: 2rem;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.pagination {
+    text-align: center;
+    padding: 20px;
+}
+
+.pagination button {
+    padding: 10px 18px;
+    margin: 0 5px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #ff7f50;
+    color: white;
+}
+
+.back-button {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    font-size: 1.1rem;
+}
