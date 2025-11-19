@@ -141,8 +141,7 @@
       const story = getField(["Story or Memory behind the recipe", "story or memory behind the recipe", "story", "memory"]);
 
       const html = `
-        <h2>${escapeHtml(recipeName)}</h2>
-        <p><strong>Submitted by:</strong> ${escapeHtml(person)}</p>
+        <h2><strong>Submitted by:</strong> ${escapeHtml(person)}</h2>
 
         <h3>Ingredients</h3>
 <ul>
@@ -186,5 +185,6 @@
   </script>
 </body>
 </html>
+
 
 
