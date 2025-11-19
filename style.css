@@ -1,5 +1,5 @@
 :root {
-  --accent: #ff7f50;
+  --accent: #ff6900;
   --bg: #f8f9fa;
   --card: #ffffff;
   --muted: #666;
@@ -115,3 +115,4 @@ footer {
   padding: 14px;
   text-align: center;
 }
+
