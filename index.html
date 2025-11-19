@@ -1,26 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Community Recipe Collection</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Community Recipe Collection</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Community Recipe Collection</h1>
+    <p class="subtitle">Browse recipes submitted by our community.</p>
+  </header>
 
-    <header>
-        <h1>Community Recipe Collection</h1>
-        <p>Browse recipes submitted by our amazing community!</p>
-    </header>
-
-    <section class="search-section">
-        <input type="text" id="searchBar" placeholder="Search recipes or ingredients...">
+  <main>
+    <section class="controls">
+      <input id="searchInput" type="search" placeholder="Search by recipe, ingredient, or submitter..." />
+      <select id="sortSelect" aria-label="Sort recipes">
+        <option value="newest">Newest first</option>
+        <option value="name">Name A → Z</option>
+      </select>
     </section>
 
-    <section class="recipe-container" id="recipeContainer"></section>
+    <section id="recipes" class="recipe-grid" aria-live="polite">
+    </section>
 
-    <div class="pagination" id="pagination"></div>
+    <nav id="pagination" class="pagination" aria-label="Recipe pages">
+    </nav>
 
-    <script src="script.js"></script>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer>
+    <p>Submit recipes via our Google Form.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
