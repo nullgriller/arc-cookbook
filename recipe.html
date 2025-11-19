@@ -145,13 +145,28 @@
         <p><strong>Submitted by:</strong> ${escapeHtml(person)}</p>
 
         <h3>Ingredients</h3>
-        <p>${escapeHtml(ingredients).replace(/; ?/g, "<br>")}</p>
+<ul>
+  ${escapeHtml(ingredients)
+    .split(/;|\n/) 
+    .map(item => `<li>${item.trim()}</li>`)
+    .join("")}
+</ul>
 
-        <h3>Cooking Instructions</h3>
-        <p>${escapeHtml(instructions).replace(/; ?/g, "<br>")}</p>
+<h3>Cooking Instructions</h3>
+<ul>
+  ${escapeHtml(instructions)
+    .split(/;|\n/)
+    .map(item => `<li>${item.trim()}</li>`)
+    .join("")}
+</ul>
 
-        <h3>Allergens</h3>
-        <p>${escapeHtml(allergens)}</p>
+<h3>Allergens</h3>
+<ul>
+  ${escapeHtml(allergens)
+    .split(/;|\n/)
+    .map(item => `<li>${item.trim()}</li>`)
+    .join("")}
+</ul>
 
         <h3>Story / Memory</h3>
         <p>${escapeHtml(story)}</p>
@@ -171,4 +186,5 @@
   </script>
 </body>
 </html>
+
 
