@@ -202,7 +202,10 @@ async function loadSheet() {
 
     const parsed = parseCSV(text);
     headers = parsed.headers;
-    allRows = parsed.data;
+   allRows = parsed.data.filter(row => {
+  const approvedValue = getFieldFromRow(row, ["Approved", "approved", "Approve", "approved?"]).trim().toLowerCase();
+  return approvedValue === "true" || approvedValue === "yes" || approvedValue === "1";
+});
 
     if (!Array.isArray(allRows)) allRows = [];
 
@@ -234,3 +237,4 @@ function setupControls() {
 document.addEventListener("DOMContentLoaded", () => {
   loadSheet();
 });
+
