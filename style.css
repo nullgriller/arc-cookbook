@@ -116,3 +116,12 @@ footer {
   text-align: center;
 }
 
+.recipe-detail ul {
+  margin-left: 20px;
+  line-height: 1.5;
+}
+
+.recipe-detail li {
+  margin-bottom: 0.4em;
+}
+
