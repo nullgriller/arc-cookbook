@@ -176,6 +176,7 @@ function renderPaginationControls(totalPages) {
 function applyFilterAndSort() {
   const q = document.getElementById("searchInput").value.trim().toLowerCase();
   const sortType = document.getElementById("sortSelect").value;
+  const lang = detectLanguageFranc(combined);
 
   filteredRows = allRows.filter(row => {
     if (!q) return true;
@@ -255,5 +256,6 @@ function setupControls() {
 document.addEventListener("DOMContentLoaded", () => {
   loadSheet();
 });
+
 
 
