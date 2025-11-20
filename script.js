@@ -7,24 +7,6 @@ let filteredRows = [];
 let currentPage = 1;
 let headers = [];
 
-function detectLanguageFranc(text) {
-  if (!text) return "und"; 
-
-  try {
-    const lang = franc(text);
-
-    const map = {
-      "eng": "en",
-      "rus": "ru",
-      "ukr": "uk"
-    };
-
-    return map[lang] || "en";  
-  } catch(e) {
-    console.error("Franc error:", e);
-    return "en";
-  }
-}
 
 function showStatus(msg) {
   const s = document.getElementById("status");
@@ -176,7 +158,6 @@ function renderPaginationControls(totalPages) {
 function applyFilterAndSort() {
   const q = document.getElementById("searchInput").value.trim().toLowerCase();
   const sortType = document.getElementById("sortSelect").value;
-  const lang = detectLanguageFranc(combined);
 
   filteredRows = allRows.filter(row => {
     if (!q) return true;
@@ -256,6 +237,7 @@ function setupControls() {
 document.addEventListener("DOMContentLoaded", () => {
   loadSheet();
 });
+
 
 
 
