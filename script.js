@@ -83,6 +83,18 @@ function getFieldFromRow(row, nameVariants) {
   return "";
 }
 
+function normalizeLanguage(raw) {
+  if (!raw) return "";
+  raw = raw.trim().toLowerCase();
+
+  if (["english", "en", "eng"].includes(raw)) return "english";
+
+  if (["russian", "ru", "rus", "русский", "рус", "ру"].includes(raw)) return "russian";
+
+  if (["ukrainian", "ua", "ukr", "українська", "укр"].includes(raw)) return "ukrainian";
+
+  return raw;
+}
 
 function renderCards(page = 1) {
   const container = document.getElementById("recipes");
@@ -160,10 +172,8 @@ function applyFilterAndSort() {
   const sortType = document.getElementById("sortSelect").value;
   const languageFilter = document.getElementById("languageFilter").value;
   function getLanguage(row) {
-  return getFieldFromRow(row, ["Language", "language", "Lang", "lang"])
-    .trim()
-    .toLowerCase();
-}
+  const raw = getFieldFromRow(row, ["Language", "language", "Lang", "lang"]);
+  return normalizeLanguage(raw);
 
   filteredRows = allRows.filter(row => {
   const lang = getLanguage(row);
@@ -251,6 +261,7 @@ languageFilter.addEventListener("change", () => {
 document.addEventListener("DOMContentLoaded", () => {
   loadSheet();
 });
+
 
 
 
