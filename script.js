@@ -7,6 +7,24 @@ let filteredRows = [];
 let currentPage = 1;
 let headers = [];
 
+function detectLanguageFranc(text) {
+  if (!text) return "und"; 
+
+  try {
+    const lang = franc(text);
+
+    const map = {
+      "eng": "en",
+      "rus": "ru",
+      "ukr": "uk"
+    };
+
+    return map[lang] || "en";  
+  } catch(e) {
+    console.error("Franc error:", e);
+    return "en";
+  }
+}
 
 function showStatus(msg) {
   const s = document.getElementById("status");
@@ -237,4 +255,5 @@ function setupControls() {
 document.addEventListener("DOMContentLoaded", () => {
   loadSheet();
 });
+
 
