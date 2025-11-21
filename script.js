@@ -172,26 +172,26 @@ function applyFilterAndSort() {
   const sortType = document.getElementById("sortSelect").value;
   const languageFilter = document.getElementById("languageFilter").value;
 
-function getLanguage(row) {
-  const raw = getFieldFromRow(row, ["Language", "language", "Lang", "lang"]);
-  return normalizeLanguage(raw);
-}  
+  function getLanguage(row) {
+    const raw = getFieldFromRow(row, ["Language", "language", "Lang", "lang"]);
+    return normalizeLanguage(raw);
+  }
 
   filteredRows = allRows.filter(row => {
-  const lang = getLanguage(row);
-  if (languageFilter !== "all" && lang !== languageFilter) return false;
+    const lang = getLanguage(row);
+    if (languageFilter !== "all" && lang !== languageFilter) return false;
 
-  if (!q) return true;
+    if (!q) return true;
 
-  const hay = [
-    getFieldFromRow(row, ["Name of the recipe", "recipe", "title"]),
-    getFieldFromRow(row, ["Name of the person", "submitter", "person"]),
-    getFieldFromRow(row, ["Ingredients list", "ingredients"]),
-    getFieldFromRow(row, ["Story or Memory behind the recipe", "story", "memory"])
-  ].join(" ").toLowerCase();
-  return hay.includes(q);
-});
+    const hay = [
+      getFieldFromRow(row, ["Name of the recipe", "recipe", "title"]),
+      getFieldFromRow(row, ["Name of the person", "submitter", "person"]),
+      getFieldFromRow(row, ["Ingredients list", "ingredients"]),
+      getFieldFromRow(row, ["Story or Memory behind the recipe", "story", "memory"])
+    ].join(" ").toLowerCase();
 
+    return hay.includes(q);
+  });
 
   if (sortType === "name") {
     filteredRows.sort((a, b) => {
@@ -258,6 +258,7 @@ function setupControls() {
 document.addEventListener("DOMContentLoaded", () => {
   loadSheet();
 });
+
 
 
 
