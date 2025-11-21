@@ -171,9 +171,11 @@ function applyFilterAndSort() {
   const q = document.getElementById("searchInput").value.trim().toLowerCase();
   const sortType = document.getElementById("sortSelect").value;
   const languageFilter = document.getElementById("languageFilter").value;
-  function getLanguage(row) {
+
+function getLanguage(row) {
   const raw = getFieldFromRow(row, ["Language", "language", "Lang", "lang"]);
   return normalizeLanguage(raw);
+}  
 
   filteredRows = allRows.filter(row => {
   const lang = getLanguage(row);
@@ -256,6 +258,7 @@ function setupControls() {
 document.addEventListener("DOMContentLoaded", () => {
   loadSheet();
 });
+
 
 
 
