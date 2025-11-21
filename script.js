@@ -243,24 +243,20 @@ async function loadSheet() {
 function setupControls() {
   const searchInput = document.getElementById("searchInput");
   const sortSelect = document.getElementById("sortSelect");
+  const languageFilter = document.getElementById("languageFilter");
 
-  searchInput.addEventListener("input", () => {
-    applyFilterAndSort();
-  });
+  searchInput.addEventListener("input", applyFilterAndSort);
+  sortSelect.addEventListener("change", applyFilterAndSort);
 
-  sortSelect.addEventListener("change", () => {
-    applyFilterAndSort();
-  });
+  if (languageFilter) {
+    languageFilter.addEventListener("change", applyFilterAndSort);
+  }
 }
-
-const languageFilter = document.getElementById("languageFilter");
-languageFilter.addEventListener("change", () => {
-  applyFilterAndSort();
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   loadSheet();
 });
+
 
 
 
