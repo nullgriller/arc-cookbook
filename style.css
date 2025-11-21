@@ -46,13 +46,15 @@ header .subtitle {
 
 main { padding: 1rem; max-width: 1100px; margin: 0 auto; }
 
-.birch-divider {
+.header-divider {
   width: 100%;
-  max-height: 120px;
-  object-fit: contain;
+  overflow: hidden;
+}
+
+.header-divider img {
+  width: 100%;
+  height: auto;
   display: block;
-  margin: 0 auto -10px auto;
-  pointer-events: none;
 }
 
 .controls {
@@ -191,6 +193,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
