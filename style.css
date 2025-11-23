@@ -29,6 +29,21 @@ body {
   padding-bottom: 0;
 }
 
+.branch-wrap {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: -40px;
+  z-index: 5; 
+}
+
+.branch-wrap img.branch {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
 header {
   text-align: center;
   padding: 3rem 1rem 1.2rem 1rem;
@@ -57,17 +72,6 @@ main {
   background: linear-gradient(to bottom, #E8DAC4, #E4CCB4);
 
   margin-top: 0;
-}
-
-.header-divider {
-  width: 100%;
-  overflow: hidden;
-}
-
-.header-divider img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .controls {
@@ -206,6 +210,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
