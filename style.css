@@ -49,16 +49,14 @@ header .subtitle {
   text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-main { 
-  padding: 1rem; 
-  max-width: 1100px; 
-  margin: 0 auto; 
+main {
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
 
-  background: linear-gradient(
-    to bottom,
-    #E8DAC4,
-    #E4CCB4
-  );
+  background: linear-gradient(to bottom, #E8DAC4, #E4CCB4);
+
+  margin-top: 0;
 }
 
 .header-divider {
@@ -208,6 +206,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
