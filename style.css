@@ -62,7 +62,6 @@ main {
 .header-divider {
   width: 100%;
   overflow: hidden;
-  background: #8B7A6F;
 }
 
 .header-divider img {
@@ -207,6 +206,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
