@@ -30,7 +30,7 @@ body {
     #8B7A6F 85%,
     #6E5F55 100%   /* darker to guarantee coverage */
   );
-  padding-bottom: 0;
+  padding-bottom: 6px;
 }
 
 .branch-wrap {
@@ -38,7 +38,7 @@ body {
   z-index: 9; 
 
   width: 100%;
-  margin-top: -28px; 
+  margin-top: -52px; 
 }
 
 .branch-wrap img {
@@ -62,7 +62,7 @@ body {
 
 header {
   text-align: center;
-  padding: 3rem 1rem 1.2rem 1rem;
+  padding: 2.4rem 1rem 0.6rem 1rem;
   background: transparent; 
   color: white;
 }
@@ -226,6 +226,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
