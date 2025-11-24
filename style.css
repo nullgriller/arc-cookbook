@@ -21,19 +21,21 @@ body {
   background: linear-gradient(
     to bottom,
     #E8DAC4 0%,
-    #DCC7B7 20%,
-    #C7B0A0 45%,
-    #A58C7F 70%,
-    #8B7A6F 100%
+    #D4BCAA 20%,
+    #B89F93 40%,
+    #9C857D 55%,
+    #8B7A6F 68%, 
+    #8B7A6F 75% 
   );
-  position: relative;
   padding-bottom: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .branch-wrap {
   width: 100%;
   position: relative;
-  margin-top: -35px; 
+  margin-top: -22px; 
   z-index: 5;
 }
 
@@ -214,6 +216,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
