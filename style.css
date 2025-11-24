@@ -20,7 +20,7 @@ body {
 .header-top {
   position: relative;
   padding-top: 3rem;
-  padding-bottom: 160px;
+  padding-bottom: 246px;
   text-align: center;
 
   background:
@@ -201,6 +201,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
