@@ -19,20 +19,45 @@ body {
 
 .header-top {
   position: relative;
-  padding-top: 3rem;
-  padding-bottom: 246px;
-  text-align: center;
+  z-index: 10;
 
-  background:
-    url("birch4.png") bottom center / 100% auto no-repeat,
-    linear-gradient(
-      to bottom,
-      #E8DAC4 0%,
-      #D4BCAA 20%,
-      #B89F93 45%,
-      #9C857D 70%,
-      #8B7A6F 100%
-    );
+  background: linear-gradient(
+    to bottom,
+    #E8DAC4 0%,
+    #D4BCAA 18%,
+    #B89F93 40%,
+    #9C857D 65%,
+    #8B7A6F 85%,
+    #6E5F55 100%   /* darker to guarantee coverage */
+  );
+  padding-bottom: 0;
+}
+
+.branch-wrap {
+  position: relative;
+  z-index: 9; 
+
+  width: 100%;
+  margin-top: -28px; 
+}
+
+.branch-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+.header-bottom {
+  position: relative;
+  z-index: 8;
+  height: 70px; 
+
+  background: linear-gradient(
+    to bottom,
+    #E8DAC4,
+    #E4CCB4
+  );
 }
 
 header {
@@ -201,6 +226,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
