@@ -17,39 +17,52 @@ body {
   line-height: 1.45;
 }
 
-.header-block {
+.header-top {
   background: linear-gradient(
     to bottom,
     #E8DAC4 0%,
-    #DCC7B7 20%,
-    #C7B0A0 45%,
-    #A58C7F 70%,
-    #8B7A6F 90%,
-    #8B7A6F 100%  
+    #D4BCAA 20%,
+    #B89F93 45%,
+    #9C857D 70%,
+    #8B7A6F 100%
   );
   padding-bottom: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .branch-wrap {
   width: 100%;
-  height: auto;
   position: relative;
-  margin-top: -40px;
-  z-index: 5; 
+  z-index: 3;
+  margin-top: -22px; 
 }
 
-.branch-wrap img.branch {
+.branch-wrap img {
   width: 100%;
   height: auto;
   display: block;
   pointer-events: none;
 }
 
+.header-bottom {
+  height: 40px; 
+  background: linear-gradient(
+    to bottom,
+    #E8DAC4,
+    #E4CCB4
+  );
+  position: relative;
+  z-index: 1;
+}
+
 header {
   text-align: center;
   padding: 3rem 1rem 1.2rem 1rem;
-  background: transparent; /* no gradient here anymore */
+  background: transparent; 
   color: white;
+  position: relative;
+  z-index: 4;
 }
 
 header h1 {
@@ -211,6 +224,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
