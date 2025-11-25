@@ -17,37 +17,30 @@ body {
   line-height: 1.45;
 }
 
-.header-top {
-  background: linear-gradient(
-    to bottom,
-    #E8DAC4 0%,
-    #D4BCAA 20%,
-    #B89F93 40%,
-    #9C857D 55%,
-    #8B7A6F 68%, 
-    #8B7A6F 75% 
-  );
-  padding-bottom: 0;
-  position: relative;
-  z-index: 2;
-}
-
-.branch-wrap {
-  width: 100%;
-  position: relative;
-  margin-top: -12px; 
-  z-index: 5;
-}
-
-.branch-wrap img.branch {
+.header-image {
   width: 100%;
   height: auto;
-  display: block;
+  background-image: url("header-full.png"); /* change name if needed */
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  /* Adjust this until spacing looks right */
+  padding-top: 3.5rem;  
+  padding-bottom: 10rem; 
 }
 
-.header-bottom {
-  height: 60px; 
-  background: linear-gradient(to bottom, #E8DAC4, #E4CCB4);
+.header-image header {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  color: white;
+  background: transparent;
+}
+
+.header-image h1,
+.header-image .subtitle {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
 
 header {
@@ -216,6 +209,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
