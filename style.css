@@ -21,11 +21,13 @@ body {
   background: linear-gradient(
     to bottom,
     #E8DAC4 0%,
-    #D4BCAA 20%,
-    #B89F93 40%,
-    #9C857D 60%,
-    #8B7A6F 80%,
-    #8B7A6F 100%
+    #CBB6A6 10%,
+    #B89F93 25%,
+    #9D857B 40%,
+    #8B7A6F 55%,
+    #7E6F65 70%,
+    #6F6157 85%,
+    #5A4E47 100%
   );
   padding-bottom: 0;
   position: relative;
@@ -34,20 +36,28 @@ body {
 
 .branch-divider {
   width: 100%;
+  line-height: 0; 
   position: relative;
   z-index: 3;
-  margin-top: -20px;
+  margin-top: -5px; 
 }
 
 .branch-divider img {
   width: 100%;
-  height: auto;
-  display: block;
+  display: block;  
+  margin: 0;
+  padding: 0;
 }
 
 .header-bottom {
   height: 40px;
-  background: linear-gradient(to bottom, #E8DAC4, #E4CCB4);
+  background: linear-gradient(
+    to bottom,
+    #5A4E47 0%,   /* exact darkest PNG shade */
+    #7C6F63 25%,
+    #A99482 60%,
+    #DCC7AF 100%
+  );
   position: relative;
   z-index: 1;
 }
@@ -218,6 +228,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
