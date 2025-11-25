@@ -20,12 +20,11 @@ body {
 .header-image {
   width: 100%;
   height: auto;
-  background-image: url("header-full.png"); /* change name if needed */
+  background-image: url("header-image.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 
-  /* Adjust this until spacing looks right */
   padding-top: 3.5rem;  
   padding-bottom: 10rem; 
 }
@@ -209,6 +208,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
