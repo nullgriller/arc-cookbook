@@ -17,49 +17,41 @@ body {
   line-height: 1.45;
 }
 
-.header-top {
+header-top {
   background: linear-gradient(
     to bottom,
     #E8DAC4 0%,
-    #CBB6A6 10%,
-    #B89F93 25%,
-    #9D857B 40%,
-    #8B7A6F 55%,
-    #7E6F65 70%,
-    #6F6157 85%,
-    #5A4E47 100%
+    #CDB7A8 35%,
+    #B2968B 60%,
+    #8F7A70 85%,
+    #7D6B63 100%
   );
-  padding-bottom: 0;
-  position: relative;
-  z-index: 2;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: white;
 }
 
 .branch-divider {
   width: 100%;
+  display: block;
+  overflow: hidden;
   line-height: 0; 
-  position: relative;
-  z-index: 3;
-  margin-top: -5px; 
 }
 
 .branch-divider img {
   width: 100%;
-  display: block;  
+  display: block;
   margin: 0;
   padding: 0;
 }
 
 .header-bottom {
-  height: 40px;
   background: linear-gradient(
     to bottom,
-    #5A4E47 0%,   /* exact darkest PNG shade */
-    #7C6F63 25%,
-    #A99482 60%,
-    #DCC7AF 100%
+    #E6D4B7 0%,
+    #E4CCB4 100%
   );
-  position: relative;
-  z-index: 1;
+  height: 60px;
 }
 
 header {
@@ -228,6 +220,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
