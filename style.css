@@ -45,6 +45,13 @@ body {
   display: block;
 }
 
+.header-bottom {
+  height: 40px;
+  background: linear-gradient(to bottom, #E8DAC4, #E4CCB4);
+  position: relative;
+  z-index: 1;
+}
+
 header {
   text-align: center;
   padding: 2.4rem 1rem 0.6rem 1rem;
@@ -211,6 +218,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
