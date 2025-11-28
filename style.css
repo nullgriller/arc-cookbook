@@ -1,10 +1,13 @@
 :root {
-  --bg-top:   #E8DAC4;
-  --bg-bottom:#E4CCB4;
-  --accent:   #B89F93;
-  --accent-dark: #998B7F;
-  --card:     #FFFFFF;
-  --text:     #000000;
+  --bg-light:   #E8DAC4;
+  --bg-medium:  #B89F93;
+  --bg-dark:    #998B7F;
+
+  --card:       #FFFFFF;
+  --card-border:#B89F93;
+
+  --text-light: #FFFFFF;
+  --text-dark:  #000000;
 }
 
 * { box-sizing: border-box; }
@@ -18,46 +21,24 @@ body {
 }
 
 .header-top {
-  position: relative;
-  z-index: 10;
-
-  background: linear-gradient(
-    to bottom,
-    #E8DAC4 0%,
-    #D4BCAA 18%,
-    #B89F93 40%,
-    #9C857D 65%,
-    #8B7A6F 85%,
-    #6E5F55 100%  
-  );
-  padding-bottom: 0;
+  background: var(--bg-medium);
+  padding: 4rem 1rem 3rem;
+  text-align: center;
+  color: var(--text-light);
 }
 
 .branch-wrap {
-  position: relative;
-  z-index: 9;  
-
   width: 100%;
-  margin-top: -28px; 
+  margin: 0;
+  padding: 0;
+  background: var(--bg-medium);
+  text-align: center;
 }
 
 .branch-wrap img {
   width: 100%;
   height: auto;
   display: block;
-  pointer-events: none;
-}
-
-.header-bottom {
-  position: relative;
-  z-index: 8;
-  height: 70px;
-
-  background: linear-gradient(
-    to bottom,
-    #E8DAC4,
-    #E4CCB4
-  );
 }
 
 header {
@@ -68,26 +49,24 @@ header {
 }
 
 header h1 {
-  font-size: 2.7rem;
-  font-weight: 600;
-  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-light);
   text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  margin-bottom: 0.5rem;
 }
 
 header .subtitle {
-  font-size: 1.2rem;
-  color: white;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  font-size: 1.3rem;
+  color: var(--text-light);
+  opacity: 0.9;
 }
 
 main {
   padding: 1rem;
   max-width: 1100px;
   margin: 0 auto;
-
-  background: linear-gradient(to bottom, #E8DAC4, #E4CCB4);
-
-  margin-top: 0;
+  background: var(--bg-light);
 }
 
 .controls {
@@ -100,11 +79,9 @@ main {
 
 .controls input[type="search"],
 .controls select {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid var(--accent-dark);
+  border: 1px solid var(--bg-dark);
   background: var(--card);
-  color: var(--text);
+  color: var(--text-dark);
 }
 
 .controls select,
@@ -130,20 +107,20 @@ main {
 
 .recipe-card {
   background: var(--card);
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  border: 1px solid var(--accent-dark);
-  cursor: pointer;
-  transition: transform .12s ease, box-shadow .12s ease;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid var(--card-border);
+  transition: transform .15s ease, box-shadow .15s ease;
 }
+
 .recipe-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
 }
+
 .recipe-card h2 {
-  margin: 0 0 8px 0;
-  color: var(--accent);
+  color: var(--bg-dark);
 }
 
 .recipe-card p.meta {
@@ -196,11 +173,12 @@ main {
 }
 
 footer {
-  margin-top: 2rem;
-  background: var(--bg-bottom);
-  padding: 14px;
+  background: var(--bg-medium);
+  padding: 20px;
   text-align: center;
-  color: var(--accent-dark);
+  color: var(--text-light);
+  margin-top: 3rem;
+  font-weight: 500;
 }
 
 .recipe-detail ul {
@@ -226,6 +204,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
