@@ -27,9 +27,10 @@ body {
   bottom: 0;
   width: 120px;           
   background-image: url("birch-vertical.png");
-  background-size: cover;
+  background-size: contain;
+  background-position: top center;
   background-repeat: repeat-y;
-  opacity: 0.45;             
+  opacity: 0.75;             
   z-index: 1;            
   pointer-events: none; 
 }
@@ -76,8 +77,8 @@ main {
   margin: 0 auto;
   background: var(--bg-light);
 
-  margin-left: 140px;
-  margin-right: 140px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .controls {
@@ -227,6 +228,7 @@ body::before {
     margin-right: 1rem;
   }
 }
+
 
 
 
