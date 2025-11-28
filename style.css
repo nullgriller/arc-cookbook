@@ -17,41 +17,47 @@ body {
   line-height: 1.45;
 }
 
-header-top {
+.header-top {
+  position: relative;
+  z-index: 10;
+
   background: linear-gradient(
     to bottom,
     #E8DAC4 0%,
-    #CDB7A8 35%,
-    #B2968B 60%,
-    #8F7A70 85%,
-    #7D6B63 100%
+    #D4BCAA 18%,
+    #B89F93 40%,
+    #9C857D 65%,
+    #8B7A6F 85%,
+    #6E5F55 100%  
   );
-  padding-bottom: 2rem;
-  text-align: center;
-  color: white;
+  padding-bottom: 0;
 }
 
-.branch-divider {
+.branch-wrap {
+  position: relative;
+  z-index: 9;  
+
   width: 100%;
-  display: block;
-  overflow: hidden;
-  line-height: 0; 
+  margin-top: -28px; 
 }
 
-.branch-divider img {
+.branch-wrap img {
   width: 100%;
+  height: auto;
   display: block;
-  margin: 0;
-  padding: 0;
+  pointer-events: none;
 }
 
 .header-bottom {
+  position: relative;
+  z-index: 8;
+  height: 70px;
+
   background: linear-gradient(
     to bottom,
-    #E6D4B7 0%,
-    #E4CCB4 100%
+    #E8DAC4,
+    #E4CCB4
   );
-  height: 60px;
 }
 
 header {
@@ -220,6 +226,7 @@ body::before {
     inset 0 0 180px rgba(0,0,0,0.22),
     inset 0 0 280px rgba(0,0,0,0.15);
 }
+
 
 
 
