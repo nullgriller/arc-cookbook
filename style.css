@@ -30,7 +30,7 @@ body {
   background-size: contain;
   background-position: top center;
   background-repeat: repeat-y;
-  opacity: 0.75;             
+  opacity: 0.90;             
   z-index: 1;            
   pointer-events: none; 
 }
@@ -228,6 +228,7 @@ body::before {
     margin-right: 1rem;
   }
 }
+
 
 
 
