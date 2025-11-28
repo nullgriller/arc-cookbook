@@ -197,10 +197,10 @@ main {
 
 footer {
   background: var(--bg-medium);
-  padding: 20px;
+  padding: 16px;
   text-align: center;
   color: var(--text-light);
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-weight: 500;
 }
 
@@ -239,6 +239,7 @@ body::before {
     margin-right: 1rem;
   }
 }
+
 
 
 
